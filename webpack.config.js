@@ -82,6 +82,13 @@ const config = {
       },
     ],
   },
+
+  resolve: {
+    fallback: {
+      crypto: false,
+      path: require.resolve('path-browserify'),
+    },
+  },
 }
 
 if (!IS_DEV) {
@@ -99,3 +106,7 @@ if (!IS_DEV) {
 }
 
 module.exports = config
+
+
+
+
